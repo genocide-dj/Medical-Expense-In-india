@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Prediction Result</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family:Inter, Arial;
+      background:linear-gradient(180deg,#cfe9ff,#e6ffe9);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+    }
+    .panel{
+      background:white;
+      padding:28px;
+      border-radius:14px;
+      width:760px;
+      box-shadow:0 14px 40px rgba(0,0,0,0.1);
+    }
+    h1{color:#064e3b}
+    .value{
+      font-size:26px;
+      font-weight:700;
+      color:#0b5f52;
+      margin:12px 0;
+    }
+    ul{padding-left:18px}
+    a{
+      display:inline-block;
+      margin-top:15px;
+      padding:10px 14px;
+      background:#059669;
+      color:white;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+    }
+  </style>
+</head>
+
+<body>
+<div class="panel">
+  <h1>Health Expenditure Prediction</h1>
+
+  <div class="value">
+    Predicted Medical Cost: ₹ {{ prediction }}
+  </div>
+
+  <p><strong>Details used:</strong></p>
+  <ul>
+    <li>Age: {{ age }}</li>
+    <li>Gender: {{ sex }}</li>
+    <li>BMI: {{ bmi }}</li>
+    <li>Children: {{ children }}</li>
+    <li>Smoker: {{ smoker }}</li>
+    <li>Region: {{ region }}</li>
+  </ul>
+
+  <a href="/prediction">Make another prediction</a>
+</div>
+</body>
+</html>

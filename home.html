@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Health Expenditure Predictor - Home</title>
+  <style>
+    :root{
+      --bg1: #f6d365;
+      --bg2: #fda085;
+      --card: rgba(255,255,255,0.9);
+      --accent: #2b7a78;
+    }
+    html,body{height:100%;margin:0;font-family:Inter, Roboto, Arial, sans-serif}
+    body{
+      background: linear-gradient(135deg,var(--bg1) 0%, var(--bg2) 100%);
+      display:flex; justify-content:center; padding:40px;
+    }
+    .container{
+      max-width:1100px;
+      width:100%;
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:24px;
+    }
+    .main{
+      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.8));
+      border-radius:14px;
+      padding:28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    .side{
+      background: var(--card);
+      border-radius:12px;
+      padding:20px;
+      height:fit-content;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+    h1{margin:0 0 10px;font-size:28px;color:#1b2928}
+    p.lead{margin:6px 0 18px;color:#3b4a49}
+    .dashboard{display:grid;gap:12px}
+    .tile{
+      background: white;
+      padding:14px;border-radius:10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+    .tile h3{margin:0 0 6px;font-size:16px;color:var(--accent)}
+    .tile a{display:block;color:#0b486b;text-decoration:none;margin:6px 0;font-size:14px}
+    nav.buttons a{
+      display:inline-block;margin-right:8px;padding:10px 14px;
+      border-radius:8px;background:var(--accent);
+      color:white;text-decoration:none;font-weight:600;
+    }
+    footer{
+      position:fixed; left:18px; bottom:12px;
+      font-size:13px; color:#083d3b;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="main">
+      <h1>Health Expenditure Predictor</h1>
+      <p class="lead">
+        Estimate medical expenditure risk using a machine learning model trained on
+        demographic and health indicators relevant to India.
+      </p>
+
+      <nav class="buttons">
+        <a href="/prediction">Make a prediction</a>
+        <a href="/prediction" style="background:#f08a5d">Try sample inputs</a>
+      </nav>
+
+      <h2 style="margin-top:22px">About this model</h2>
+      <p>
+        The model uses parameters such as <strong>age, hypertension, heart disease,
+        BMI, glucose level, smoking status, residence type, marital status</strong>
+        to estimate expected medical expenditure risk.
+      </p>
+    </div>
+
+    <aside class="side">
+      <h2>Dashboard</h2>
+
+      <div class="tile">
+        <h3>Government Schemes</h3>
+        <a href="https://www.india.gov.in/spotlight/ayushman-bharat-pradhan-mantri-jan-arogya-yojana" target="_blank">
+          Ayushman Bharat
+        </a>
+        <a href="https://nhm.gov.in/" target="_blank">
+          National Health Mission
+        </a>
+      </div>
+
+      <div class="tile">
+        <h3>Hospitals</h3>
+        <a href="https://www.google.com/maps" target="_blank">
+          Find nearby hospitals
+        </a>
+      </div>
+
+      <div class="tile">
+        <h3>Research</h3>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">
+          PubMed Medical Research
+        </a>
+        <a href="https://www.who.int/" target="_blank">
+          World Health Organization
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer>developed by Aman Kumar</footer>
+</body>
+</html>
